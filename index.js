@@ -112,14 +112,33 @@ function mySize (collection) {
 
 // Array Functions
 
-function myFirst (array, n) {
+function myFirst (array, n = false) {
     let modArr 
     if (n) {
-        modArr = array.slice(0, n)
+        return modArr = array.slice(0, n)
     } else {
-        modArr = array.shift()
-    }
-    return modArr
+        return modArr = array[0]
+    } 
 }
 
-console.log(myFirst([1, 2, 3, 4, 5]))
+function myLast (array, n = false) {
+    let modArr
+    let lastItem = array[array.length - 1]
+    if (n) {
+        return modArr = array.slice(-n)
+    } else {
+        return lastItem
+    }
+}
+
+// Object Functions
+
+function myKeys (object) {
+    let keysArr = []
+    return keysArr = Object.keys(object)
+}
+
+function myValues (object) {
+    let valArr = []
+    return valArr = Object.values(object)
+}
